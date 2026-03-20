@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Navbar</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+    <header class="Navbar">
+        <div class="logo"><img src="img/logo (1).png" alt="img"></div>
+        <nav class="nav-links" id="nav-links">
+           <li><a href="#">Home</a></li>
+          <li><a href="#">About-Us</a></li>
+           <li><a href="#">Blog</a></li>
+
+            <li><a href="#" class="login-btn">Log In</a></li>
+        
+
+        </nav>
+        <div class="hamburger" id="hamburger">&#9776</div>
+    </header>
+
+
+    <!--hero-->
+    <section class="hero">
+        <div class="hero-text">
+            <h1>Transform Your<br> Fitness Journey.<br>
+            Start Today!</h1>
+            <p>Track workout,monitor progress, and<br>
+                 achieve your fitness goals with our all-in-one <br>
+                fitness app.</p>
+            <div class="button">
+                <a href="#signup" class="btn-p">Get Started</a> 
+            </div><br><br>
+            <div class="button">
+                <a href="#signup" class="btn-s">Book a Demo</a>
+            </div>
+        </div>
+    </section>
+<section class="img1">
+    <img src="/img/hero-bg (1).png" alt="img">
+</section>
+<section class="get">
+    <h2>Discover how our app works and get fit in no time</h2>.
+    <img src="/img/video-preview (1).png" alt="img">
+</section>
+<section class="t">   
+    <button class="btn" id="signup">Get Started</button>
+</section>
+<!---testimonies-->
+<section class="testimonies">
+<h2>Hear from our satisfied users who transformed their lives</h2>
+<div class="container-test">
+    <div class="test">
+        <p>"I've lost 10 pounds in just a month! This app keeps me 
+            motivated and track with my fitness goals."
+        </p>
+            <h4>Alice Johnson</h4>
+           <p>Health Coach</p>
+        
+    </div>
+
+    <div class="test">
+        <p>"The workout plans are easy to follow,and the progress tracking feature is incredibly helpful.
+            I feel stronger everyday!"
+        </p>
+    
+            <h4>Mark Thompson</h4>
+           <p> Personal Trainer</p>
+    </div>
+
+    <div class="test">
+        <p>"This app has changed my fitness routine completely.  
+            I love the community support and challenged!"
+        </p>
+        
+            <h4>Sarah Parker</h4>
+            <p>Fitness Enthusiast</p>
+        
+    </div>
+</div>
+</section>
+<!---pricing-->
+<section class="pricing">
+    <h2>Pricing</h2>
+    <p>Start with our free plan and unlock premium features as you grow.
+        <div class="basic">
+            <h3>Basic</h3>
+            <p>Ideal for beginners to track workouts and monitor 
+                progress
+            </p>
+            <p><span>Free</span>*No credit card needed</p>
+            <hr>
+           <li>Customizable workout plans</li>
+           <li>Track daily progress</li>
+           <li>Nutrition tracker</li>
+           <li>Access to community challenges</li>
+           <button class="btn-p" id="signup">Get Started</button>
+
+        </div>
+    </p>
+</section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <script>
+        const hamburger = document.getElementById("hamburger");
+        const navLinks = document.getElementById("nav-links");
+        hamburger.addEventListener("click", () =>{
+            navLinks.classList.toggle("active");
+
+        });
+    </script>
+</body>
+</html>
