@@ -106,17 +106,15 @@ body{
     background: #000;
     text-align: center;
 }
-.btn{
+.bt{
    background: #4a7dfc;
     color: #fff;
-    text-align: center;
-    padding: 14px 30px;
-    font-size: 17px;
+    align-items: center;
+    padding: 12px 40px;
+    margin-left: 350px;
+    max-width: 400px;
     border-radius: 10px;
-    margin-top: -5px;
-    border: none;
-    cursor: pointer;
-    text-decoration: none; 
+    text-decoration: none;
 }
 .testimonies{
     background: #000;
@@ -151,52 +149,244 @@ body{
     padding: 20px;
     padding-bottom: 8px;
 }
+
+/*pricing*/
+
 .pricing{
-   padding: 30px;
+   max-width: 700px;
+   margin: auto;
    text-align: center;
-   background: #000;
-   color: #fff;
 }
 .pricing h2{
-    font-size: 35px;
+    margin-top: 25px;
+    font-size: 32px;
     padding-bottom: 10px;
 }
 .pricing p{
     font-size: 18px;
-    padding-bottom: 20px;
-}
-.basic{
-    background: #fff;
-    padding: 20px 40px; 
+    margin-bottom: 30px;
     color: #000;
+}
+.pricing-cards{
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px;
+}
+.card{
+    background: #eaeaea;
+    padding: 25px;
     border-radius: 15px;
-    cursor: pointer;
-     
+    text-align: left;
 }
-.basic h3{
-    font-size: 25px;
-    padding-bottom: 10px;
+.card h3{
+    font-size: 30px;
+    margin-bottom: 10px;
+
 }
-.basic span{
-    font-size: 25px;
+.card p{
+    font-size: 18px;
+    margin-bottom: 20px;
+}
+.card .pl{
+    font-size: 18px;
+    
+}
+.card span{
+    color: #000;
+    font-size: 30px;
     font-weight: bold;
 }
-.basic li{
+.feat{
     list-style: none;
-    font-size: 18px;
-    align-items: flex-start;
-    margin: 10px;
+    margin-bottom: 20px;
 }
-.basic button{
-    border: none;
+.feat li{
+    margin: 12px 0;
+    font-size: 18px;
 }
 
+.btn:hover{
+    background: #357abd;
+}
+/*ptag*/
+.p{
+    padding: 40px 20px;
+    text-align: center;
+    max-width: 100%;
+
+}
+.pc{
+    background: #000;
+    color: #fff;
+    max-width: 700px;
+    margin: auto;
+    padding: 30px 35px;
+    border-radius: 10px;
+
+}
+.plan{
+    font-size: 33px;
+    margin-bottom: 16px;
+}
+.description{
+    color: #efefef;
+    line-height: 1.6;
+    margin-bottom: 26px;
+}
+.price{
+    font-size: 35px;
+    margin-bottom: 10px;
+}
+.price span{
+    font-size: 18px;
+    color: #bbb;
+}
+hr{
+    border: .5solid #444;
+}
+.feature-title{
+    margin-bottom: 15px;
+    color: #ddd;
+} 
+.fe{
+    list-style: none;
+    padding: 0;
+    text-align: left;
+    margin-bottom: 25px;
+}
+.fe li{
+    margin: 12px 0;
+    font-size: 16px;
+}
+.btn{
+    width: 100%;
+    padding: 15px;
+    border: none;
+    border-radius: 12px;
+    background: #4a84e3;
+    color: #d9e6f3;
+    font-size: 18px;
+    cursor: pointer;
+}
+.btn:hover{
+    background: #3a6fca;
+}
+.note{
+    margin-top: 20px;
+    color: #555;
+    max-width: 400px;
+    margin-left: auto;
+    margin-right: auto;
+}
+/*faq*/
+
+.faq-c{
+    max-width: 800px;
+    margin: auto;
+}
+.faq-tab{
+    display: flex;
+    margin-bottom: 20px;
+    background: #ddd;
+    padding: 5px;
+    border-radius: 10px;
+}
+.tab{
+    flex: 1;
+    padding: 10px 18px;
+    margin: 15px;
+    text-align: center;
+    border-radius: 8px;
+    font-weight: 600;
+    cursor: pointer;
+}
+.tab-active{
+    background: #3b82fb;
+    color: #fff;
+    margin: 15px;
+    padding: 10px 18px;
+    border-radius: 5px;
+    border: none;
+}
+.faq-item{
+    border-bottom: 1px solid #ddd;
+    padding: 15px 0;
+}
+.faq-question{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-weight: 600;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.icon{
+    font-size: 22px;
+    font-weight: bold;
+    transition: .3s;
+}
+.faq-answer{
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.4s ease;
+    color: #555;
+    font-size: 14px;
+    margin-top: 10px;
+}
+.faq-answer p{
+    margin-top: 10px;
+    color: #555;
+}
+.faq-item .active .icon{
+    transform: rotate(45deg);
+}
+.footer{
+    background: #0b0b0b;
+    color: #ccc;
+    padding: 40px 20px;
+    margin-top: 50px;
+}
+.footer-c{
+    max-width: 900px;
+    margin: auto;
+}
+.footer-logo{
+    font-size: 24px;
+    font-weight: bold;
+    color: #4a90e2;
+    margin-bottom: 20px;
+}
+.footer-links{
+    list-style: none;
+}
+.footer-links li{
+    margin: 10px 0;
+}
+.footer-links a{
+    text-decoration: none;
+    color: #ccc;
+    transition: .3s;
+}
+.footer-links a:hover{
+    color: #4a90e2;
+}
+.footer-bottom{
+    margin-top: 20px;
+    font-size: 14px;
+    color: #888;
+}
 @media(max-width: 768px){
     .hero{
         padding-left: 150px;
         text-align: center;
         gap: 30px;
     
+    }
+    .bt{
+        margin-left: 3px;
+        align-items: center;
+        text-align: center;
     }
     .hero-text{
         text-align: center;
@@ -230,5 +420,35 @@ body{
     }
     .get img{
         max-width: 550px;
+    }
+    .basic li{
+        align-items: start;
+        text-align: center;
+    }
+    .plan{
+        font-size: 30px;
+    }
+    .price{
+        font-size: 32px;
+    }
+    .btn{
+        font-size: 16px;
+    }
+    .basic{
+        margin-left: 30px;
+        text-align: center;
+    }
+    .list li{
+        text-align: center;
+        align-items: start;
+    }
+    .faq-question{
+        font-size: 16px;
+    }
+    .icon{
+        font-size: 20px;
+    }
+    .footer-logo{
+        font-size: 20px;
     }
 }

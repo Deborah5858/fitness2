@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Responsive Navbar</title>
     <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 <body>
     <header class="Navbar">
@@ -14,7 +15,7 @@
           <li><a href="#">About-Us</a></li>
            <li><a href="#">Blog</a></li>
 
-            <li><a href="#" class="login-btn">Log In</a></li>
+            <li><a href="#" class="login-btn"><i class="fa far-user-tie"></i>Log In</a></li>
         
 
         </nav>
@@ -44,10 +45,13 @@
 <section class="get">
     <h2>Discover how our app works and get fit in no time</h2>.
     <img src="/img/video-preview (1).png" alt="img">
+
+    <br><br><br>
+    <div class="bt" id="signup">Get Started</a> 
+    </div>
 </section>
-<section class="t">   
-    <button class="btn" id="signup">Get Started</button>
-</section>
+
+
 <!---testimonies-->
 <section class="testimonies">
 <h2>Hear from our satisfied users who transformed their lives</h2>
@@ -82,27 +86,122 @@
 </div>
 </section>
 <!---pricing-->
-<section class="pricing">
+<section class="pricing" id="signup">
     <h2>Pricing</h2>
-    <p>Start with our free plan and unlock premium features as you grow.
-        <div class="basic">
-            <h3>Basic</h3>
-            <p>Ideal for beginners to track workouts and monitor 
-                progress
-            </p>
-            <p><span>Free</span>*No credit card needed</p>
-            <hr>
-           <li>Customizable workout plans</li>
-           <li>Track daily progress</li>
-           <li>Nutrition tracker</li>
-           <li>Access to community challenges</li>
-           <button class="btn-p" id="signup">Get Started</button>
+    <p>Start with our free plan and unlock premium features as you grow.</p>
 
+        <div class="pricing-cards">
+            <div class="card">
+               <h3>Basic</h3>
+               <p>Ideal for beginners to track workouts and monitor 
+                progress
+               </p>
+                <p class="pl"><span>Free</span>*No credit card needed</p>
+                <hr>
+        
+               <ul class="feat">
+                 <li><i class="fa fa-check" aria-hidden="true"></i>Customizable workout plans</li>
+                 <li><i class="fa fa-check" aria-hidden="true"></i>Track daily progress</li>
+                 <li><i class="fa fa-check" aria-hidden="true"></i>Nutrition tracker</li>
+                  <li><i class="fa fa-check" aria-hidden="true"></i>Access to community challenges</li>
+                </ul>
+                <button class="btn">Get Started</button>
+            
         </div>
+
+</section>
+
+<!--pricing-->
+<section class="p">
+    <div class="pc">
+        <h2 class="plan">Pro</h2>
+        <p class="description">
+            Everything in the Basic plan plus advanced features for serious atheletes.
+        </p>
+        <h3 class="price">$29 <span>/month</span></h3>
+        <hr>
+        <p class="feature-title">
+            <ul class="fe">
+                <li><i class="fa fa-check" aria-hidden="true"></i> Personalized Coaching</li>
+                <li><i class="fa fa-check" aria-hidden="true"></i>Advanced analytics </li>
+                <li><i class="fa fa-check" aria-hidden="true"></i> Offline access</li>
+            </ul>
+            <button class="btn"onclick="scrollToSection()" id="signup">Get Started</button>
+        </p>
+    </div>
+    <p class="note">
+        All prices are in USD and charged per month with application taxes added at checkout
     </p>
 </section>
 
 
+<!--faq-->
+
+    <div class="faq-c">
+
+        <div class="faq-tab">
+          <div class="tab-active">All</div>
+          <div class="tab">Getting Started</div>
+          <div class="tab">Pricing</div>
+        </div>
+
+        <div class="faq-item">
+            <div class="faq-question">
+                <span>How can the app help me achieve my fitness goals</span>
+                <span class="icon">+</span>
+            </div>
+
+            <div class="faq-answer">
+                <p>Our fitness App provides personalized workout plans,progress tracking,
+                    and expert guidance to help you reach your fitness goals faster.
+                </p>
+            </div>
+        </div>
+
+
+        <div class="faq-item">
+            <div class="faq-question">
+                <span>Can i customize my workout plans</span>
+                <span class="icon">+</span>
+            </div>
+
+            <div class="faq-answer">
+                <p>Yes,you can fully customize your workout plans based 
+                    on your fitness level,goals,and available equipment.
+                </p>
+            </div>
+        </div>
+
+
+        <div class="faq-item">
+            <div class="faq-question">
+                <span>Is there a free trial available?</span>
+                <span class="icon">+</span>
+            </div>
+
+            <div class="faq-answer">
+                <p>Yes,we offer a 7-day free trial so you can explore all premium
+                    features before subscribing.
+                </p>
+            </div>
+        </div>
+
+
+    </div>
+
+
+    <!--footer-->
+    <footer class="footer">
+        <div class="footer-c">
+            <div class="footer-logo"><img src="/img/logo (1).png" alt="img"></div>
+            <ul class="footer-links">
+                <li><a href="#">Privacy Policy</a></li>
+                <li><a href="#">Terms of Service</a></li>
+                <li><a href="#">Contact Us</a></li>
+            </ul>
+            <div class="footer-bottom">@2026 Fitness App by Oladiipo Olabisi. All rights reserved.</div>
+        </div>
+    </footer>
 
 
 
@@ -137,12 +236,53 @@
 
 
     <script>
+
         const hamburger = document.getElementById("hamburger");
         const navLinks = document.getElementById("nav-links");
         hamburger.addEventListener("click", () =>{
             navLinks.classList.toggle("active");
 
         });
+
+        const faqItems = document.querySelectorAll(".faq-item");
+        faqItems.forEach(item => {
+            const question =
+            item.querySelector(".faq-question");
+            const answer =
+            item.querySelector(".faq-answer");
+             const icon = item.querySelector(".icon");
+
+           question.addEventListener("click", () => {
+
+                faqItems.forEach(i => {
+                    if (i !== item) {
+
+                 i.querySelector(".faq-answer").style.maxHeight = null;
+
+                 i.querySelector(".icon").textContent = "+";
+
+                    }
+                });
+                    
+
+                if (answer.style.maxHeight) {
+                    answer.style.maxHeight = null;
+                    icon.textContent = "+";
+                } else {
+                    answer.style.maxHeight =
+                    answer.scrollHeight + "px";
+                    icon.textContent = "_";
+                }
+        });
+    });
+
+    function scrollToSection(){
+        window.srollTo({
+            top: document.body.scrollHeight,
+            behaviour: "smooth"
+        });
+    }
+
     </script>
 </body>
 </html>
