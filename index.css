@@ -11,10 +11,12 @@ body{
 .Navbar{
     display: flex;
     justify-content: space-between;
-    align-items: center;
-    padding: 20px 40px;
+    align-items: flex-start;
+    padding: 10px 30px;
     background: white;
     position: relative;
+    font-size: 18px;
+    font-weight: bold;
 }
 
 .logo{
@@ -33,9 +35,14 @@ body{
     color: #333;
     font-size: 17px;
 }
+.nav-links a:hover{
+    color: #4a7dfc;
+    background: skyblue;
+    padding: 10px 50px;
+}
 
 .login-btn{
-    padding: 12px 20px;
+    padding: 12px 30px;
     display: flex;
     gap: 8px;
     align-items: center;
@@ -290,6 +297,9 @@ hr{
     background: #ddd;
     padding: 5px;
     border-radius: 10px;
+}
+.faq-tab:hover{
+    background: skyblue;
 }
 .tab{
     flex: 1;
